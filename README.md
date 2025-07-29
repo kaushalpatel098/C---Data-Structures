@@ -1,2 +1,1 @@
-# C---Data-Structures
-Its a repository containing codes about data structures as I learn them in C language.
+It contains code from my learning journey of data structures in C language.
