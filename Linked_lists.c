@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// stores definition of a node in the linked list
 struct node {
     int data;
     struct node* next;
 };
-
+// function prototypes
 void createlist(struct node** head, int* count);
 void displaylist(struct node* head);
 void insert(struct node** head, int* count);
@@ -25,10 +25,9 @@ int main(){
     int choice;
     int count = 0; 
     int i = 0;
-    
+    // Main menu loop
     while (i != -1){
     printf("\n1. Create a linked list\n2. Display the linked list\n3. Insert\n4. Delete\n5. Search\n6. Reverse\n7. Delete whole list.\n8. Exit\n\nEnter your choice:");
-    // scanf("%d", &choice);
     if(!validinput(&choice)){
         continue;
     }
@@ -55,7 +54,7 @@ int main(){
         break;
     case 7:
         deletewhole(&head);
-        count = 0;
+        count = 0; //resets the count after deleting the whole list
         break;
     case 8:
         printf("Exiting the program...\n");
@@ -83,7 +82,7 @@ void createlist(struct node** head, int* count) {
         printf("Enter the data for the node %d: ", i+1);
         scanf("%d", &newnode->data);
         newnode->next = NULL;
-        (*count)++;
+        (*count)++; // Increments count for each new node
         if(*head == NULL){
             *head = newnode;
             temp = *head;
@@ -116,6 +115,7 @@ void insert(struct node** head, int* count){
         printf("The list is empty, create a list first.\n");
         return;
     }
+    // Insert menu loop
     while(1){
     printf("Where do you want to insert the node?\n1. At the beginning\n2. At a specific position\n3. At the end\n4. Exit\n\nEnter your choice: ");
     if(!validinput(&choice)){
@@ -191,6 +191,7 @@ void delete(struct node** head, int* count){
         printf("The list is empty, create a list first.\n");
         return;
     }
+    // Delete menu loop
     while(1){
     printf("Where do you want to delete the node?\n1. At the beginning\n2. At a specific position\n3. At the end\n4. Exit\n\nEnter your choice: ");
     if(!validinput(&choice)){
@@ -312,6 +313,7 @@ void deletewhole(struct node** head){
     printf("The whole list has been deleted.\n");
 }
 
+// Function to validate user input for integers
 int validinput(int* input) {
     if(scanf("%d", input) != 1) {
         printf("Input only integers. Press enter to continue.\n");
