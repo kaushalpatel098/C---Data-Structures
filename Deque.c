@@ -1,4 +1,4 @@
-// Implementation of a Double Endedd Queue (Deque) using Array
+// Implementation of a Double Ended Queue (Deque) using Array
 
 #include <stdio.h>
 
@@ -81,6 +81,7 @@ void insertfront(){
         front = (front - 1 + MAX) % MAX;
         deque[front] = value;
     }
+    printf("Inserted %d at front.\n", value);
 }
 
 void insertrear(){
@@ -98,6 +99,7 @@ void insertrear(){
         rear = (rear + 1) % MAX;
         deque[rear] = value;
     }
+    printf("Inserted %d at rear.\n", value);
 }
 
 void deletefront(){
