@@ -1,3 +1,5 @@
+// Implementation of a simple singly linked list in C.
+
 #include <stdio.h>
 #include <stdlib.h>
 // stores definition of a node in the linked list
