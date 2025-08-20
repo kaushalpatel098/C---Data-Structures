@@ -1,3 +1,5 @@
+// Implementation of a Stack in static memory using an array in C.
+
 #include <stdio.h>
 
 #define SIZE 10 
