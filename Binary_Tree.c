@@ -31,7 +31,6 @@ int main()
             printf("Invalid input, please enter an integer.\n");
             int c;
             while ((c = getchar()) != '\n' && c != EOF)
-                ;
             continue;
         }
         switch (choice)
