@@ -1,3 +1,5 @@
+// Implementation of a Stack in dynamic memory using a linked list in C.
+
 #include <stdio.h>
 #include <stdlib.h>
 
